@@ -21,7 +21,7 @@ var main = function() {
     }, 200);
   });
   
-  $('.sea_star').mouseenter(function() {
+  $('.sea_star a img').mouseenter(function() {
     $(this).animate({
       height: "250px",
 	  width: "250px"
@@ -29,7 +29,7 @@ var main = function() {
   });
 
   
-  $('.sea_star').mouseenter(function() {
+  $('.sea_star a img').mouseenter(function() {
     $(this).animate({
       height: "150px",
 	  width: "150px"

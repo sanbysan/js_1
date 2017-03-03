@@ -76,18 +76,13 @@ body {
 	padding-right: 90px;
 }
 .sea_star {
-	float: left;
-	margin: 60px -100px 0 200px;
-	height: 150px;
-	width: 150px;
-	cursor: pointer;
-}
-.sea_star:last-child {
-	margin-right: 0px;
+	float: right;
+	margin: 60px 0 0 45px;
+	width: 20%;
 }
 .sea_star > a > img {
-	height: 100%;
-	width: 100%;
+	height: 50%;
+	width: 50%;
 	cursor: pointer;
-	margin: 0px 0px 0px 25px;
+	margin: auto;
 }
