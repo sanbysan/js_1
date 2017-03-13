@@ -1,53 +1,47 @@
 var main = function() {
-  
-  $('.icon-menu').click(function() {
-    $('.menu').animate({
-      left: "0px"
-    }, 200);
+    
+$('.icon-menu').click(function() {
+    if ($('.menu').css('left') !== '0px') {
+		$('.menu').animate({
+		  left: "0px"
+		}, 200);
 
-    $('body').animate({
-      left: "285px"
-    }, 200);
-  });
+		$('.sand').animate({
+		  left: "150px"
+		}, 200);
+	} else {
+		$('.menu').animate({
+		  left: "-150px"
+		}, 200);
 
-  
-  $('.icon-close').click(function() {
-    $('.menu').animate({
-      left: "-285px"
-    }, 200);
-
-    $('body').animate({
-      left: "0px"
-    }, 200);
-  });
-  
-  $('.sea_star a img').mouseenter(function() {
-    $(this).animate({
-      height: "250px",
-	  width: "250px"
-    }, 300);
+		$('.sand').animate({
+		  left: "0px"
+		}, 200);
+	}
   });
 
+  $('.main-btn img').on({
+	   mouseenter: function(){
+            $(this).stop(true).animate({
+				  height: "75%",
+				  width: "75%"
+				}, 300);
+		},
+          
+       mouseleave: function(){
+            $(this).animate({
+				  width: "50%"
+				}, 300);
+        }, 
+        click: function(){
+            $(this).stop(true).animate({
+				   opacity: '0.5',
+				}, 300).animate({
+				  opacity: '1.0',
+				}, 300);
+        }  
+    });
   
-  $('.sea_star a img').mouseenter(function() {
-    $(this).animate({
-      height: "150px",
-	  width: "150px"
-    }, 300);
-  });
-  $('.sea_star').click(function() {
-    $(this).animate({
-       opacity: '0.5',
-    }, 300);
-  });
-
-  
-  $('.sea_star').click(function() {
-    $(this).animate({
-      opacity: '1.0',
-    }, 300);
-  });
 };
-
 
 $(document).ready(main);
