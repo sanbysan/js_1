@@ -1,9 +1,11 @@
-.sand {
+#sand {
 	background-image: url("../img/piasek.jpg");
 	background-size: cover;
 	width: 100%;
 	height: 100%;
 	position: relative;
+	display: flex;
+	flex-flow: column;
 }
 html {
 	height: 100%;
@@ -12,25 +14,25 @@ body {
 	height: 100%;
 	left: 0;
 	margin: 0;
-	overflow: hidden;
+	overflow-x: hidden;
 	position: relative;
 	background: #F2F3E9;
 }
-.menu {
+#menu {
   background: #F2F3E9;
   left: -150px;  
   height: 100%;
   position: fixed;
   width: 150px;
 }
-.menu ul {
+#menu ul {
   border-top: 1px solid #696969;
   list-style: none;
   margin: 125px 0 0 0;
   padding: 0;
 }
 
-.menu li {
+#menu li {
   border-bottom: 1px solid #696969;
   font-family: 'Amatic SC', cursive;
   line-height: 45px;
@@ -39,16 +41,16 @@ body {
   text-align: center;
 }
 
-.menu a {
+#menu a {
   color: #696969;
   font-size: 35px;
   font-weight: bold;
   text-decoration: none;
 }
-.menu a:hover {
+#menu a:hover {
   color: #8fa799;
 }
-.icon-menu > h1 {
+#icon-menu {
   color: #fff;
   background-color: rgba(116,119,82,0.6);
   border-radius: 50px;
@@ -63,35 +65,39 @@ body {
   margin-top: 10px;
   margin-left: 20px;
   text-decoration: none;
-  float: left;
   position: fixed;	
   top: 0;
 }
-.title {
-	width: 100%;
-	margin-top: -65px;
-	height: 150px;
-}
-.title > h1 {
+#title {
 	color: #fff;
 	font-family: 'Amatic SC', cursive;
 	text-shadow: 4px 3px 4px #ff0000;
 	font-size: 95px;
 	font-weight: bold;
 	text-align: center;
+	width: calc(100% - 300px);
+	margin: 0 auto;
+	flex: 0 1 auto;
 }
 .main-btn {
 	text-align: center;
 	width: 25%;
+	min-width: 200px;
 	display: inline-block;
-	vertical-align: middle;
 	align-self: center;
 }
 .main-btn > a > img {
 	height: 50%;
 	width: 50%;
 }
-.main-btn-container {
+#main-btn-container {
 	display: flex;
-	height: calc(100% - 150px);
+    flex-wrap: wrap;
+	height: 100%;
+	flex: 1 1 auto;
+}
+@media (max-width: 800px) {
+	#title {
+		font-size: 60px;
+	}
 }

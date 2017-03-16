@@ -1,20 +1,20 @@
 var main = function() {
     
-$('.icon-menu').click(function() {
-    if ($('.menu').css('left') !== '0px') {
-		$('.menu').animate({
+$('#icon-menu').click(function() {
+    if ($('#menu').css('left') !== '0px') {
+		$('#menu').animate({
 		  left: "0px"
 		}, 200);
 
-		$('.sand').animate({
+		$('#sand').animate({
 		  left: "150px"
 		}, 200);
 	} else {
-		$('.menu').animate({
+		$('#menu').animate({
 		  left: "-150px"
 		}, 200);
 
-		$('.sand').animate({
+		$('#sand').animate({
 		  left: "0px"
 		}, 200);
 	}
