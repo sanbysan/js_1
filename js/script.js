@@ -1,23 +1,8 @@
 var main = function() {
     
 $('#icon-menu').click(function() {
-    if ($('#menu').css('left') !== '0px') {
-		$('#menu').animate({
-		  left: "0px"
-		}, 200);
-
-		$('#sand').animate({
-		  left: "150px"
-		}, 200);
-	} else {
-		$('#menu').animate({
-		  left: "-150px"
-		}, 200);
-
-		$('#sand').animate({
-		  left: "0px"
-		}, 200);
-	}
+    $("#menu").toggleClass("visible");
+	$("#sand").toggleClass("menu-visible");
   });
 
   $('.main-btn img').on({
